@@ -1,0 +1,91 @@
+make it so that it loads number of entries based on aspect ratio
+fix freebee logo hitting search bar upon aspect ratio change   
+fix pfp positioning
+create alt tags for the give and wishlist buttons
+
+what's this? "A form field element should have an id or name attribute"
+create clearing system for verification id email table
+
+Future plans:
+- make settings page to change username and password, as well as set location, and shipping address
+- gotta make saveable wishlist
+- help page should be easy
+- server error page
+- have to implemeent the crowdsourcing
+- having to implement search and query
+- have to implement filters, and selling object describing factors so that they can be filtered through
+- gotta amake credits  page
+- have to make log out and go to settings feature
+- make thing that lets you see the password
+
+
+DIDN'T CHANGE ANYTHING WITH LOGIN/SIGNUP AFTER REORGANIZING FILING SYSTEM
+FIGURE OUT ACCOUNT SYSTEM
+
+IMPORTANT THING TO DO: //**
+
+today:
+- how to make <a> href open in new tab
+
+LONG TERM:
+- the confirmers have their confirmed freebies put into the database
+- email verification
+
+- post verification
+- hashed passwords
+- error handlig
+- try catch for every query database
+- check for robot
+- change domain name 
+    in many areas like in client_side.js, 
+    search autocorrect.js 
+    and in .env file
+- change search so that when there are no spaces, it still autocorrects. some ML system maybe?
+- MAKE IT SO THAT FOR USERES TO CONTACT ITS LIKE HELP@FREEBEE.ORG OR SOMETHING
+- ... for productName wherever it appears (settings, thumbnails etc)
+- fix all fetch errors
+- set up login if authentication failed shows something on screen
+- how to make sure that others can just do get requests in order to get confirmation links for products
+
+SAFETY: 
+- FUNCTION NEEDED IN PRODUCTS POST IN ORDER TO MAKE SURE THAT THE FILE SAVED ISN'T MALICIOUS GIVEPAGEROUTER.JS
+- build system to handle errors
+- make sure the tempUploads folder gets cleared out??
+
+TO DO: 
+- transition history/blocking mechanism
+- NEED TO CHECK WHETHER OR NOT OFFER IS IN ACCEPTED DATABASE BEFORE ACCEPTING
+- email verificaiton
+- make it so that all the product input fields are required
+- make sure that the blob is retrievable in a normal way
+- standardize all searching stuff to just lowercase, and emails to just lowercase, too
+- add mobile version for product thumbnail creation
+- options for getting
+    - *note: accepter accepts, gets phone number/email
+    - gets moved into accepted DB
+    - incentive for donor to continue: donor needs to enter acceptor's password/accepter needs to go to confirmation link
+    - acceptor can be reported for not giving password
+- need to make sure that donationAccepted is ONLY able to be accessed by accounts that have accepted it after it has been accepted one time
+- make it so that you can not create an account if your account emaill already exists
+- allow user to remove something they have put up for donation
+- make it so that after email verification, tells you that your account was created
+- make it so that toReturn transfers over from logIn to signUp
+- make it so that returnTo is saved in session storage
+- get rid of accepted freebies
+- create batch session saves
+- add support in emails
+- also add how to confirm reception?
+- reporting is restricted for some reason
+-confirm from email isn't working
+
+TMRW:
+- figure out a way to make it so that the search is available by query and by original loadup, 
+finished off by trying to make dynamic html
+- if donated, can't accept own donation
+- clear received product from database
+- post validation
+- TEST creation of product
+- EMAIL when item is unaccepted/unlisted. Email sent on accepting donation
+
+
+

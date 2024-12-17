@@ -1,0 +1,93 @@
+<!doctype html> <title>Freebee</title> 
+<head>
+    <link rel="stylesheet" href="/css/homescreen.css">
+    <link rel="stylesheet" href="/css/signInTab.css">
+</head>
+    <body style="background:#363636">
+        <!--Freebee logo-->
+        <a class="freebeeLogo" href="/">Freebee</a >
+
+        <!--Makes sure products are masked away when scrolling down-->
+        <div id = "productMasker">
+            
+        </div>
+        
+
+        <!-- Searchbar and everything positionally related to it (search bar, search button, filter, and pfp)-->
+        <div class="searchBarHolder">
+
+            
+            <input placeholder="Search" type="text" maxlength="500" class = "searchBar" id="searchBar" value="<%= locals.searchBarValue ? locals.searchBarValue : '' %>">
+                <!--Search bar button-->
+                <img src="/images/searchBarButton.png" class = "searchBarButton buttonify" id = "searchBarButton">
+                
+                <!--Filter Button--> 
+                <div style="display:inline-block; position:relative; top:10.5px; left:-25px; width:40px; height:27px;" class="buttonify clickify">
+                        <div id = "filterButton"></div>
+                </div>
+                
+                <!--PFP-->
+                <a style="display:inline-block; position:relative; left: 15%; top:20px; " class="clickify buttonify" href="/login" id = "pfpIdForOrg">
+                    <div id = "profileLogo">
+                    <div id = "profilePerson"></div> 
+                    </div>
+                </a>
+                
+                <!--testing-->
+            <!-- <div id="signInTab">
+                    <button id="logInButton" class='buttonify' onclick="switchSignInButton(false)">Log In</button>
+                    <button id="signUpButton" class='buttonify' onclick="switchSignInButton(true)">Sign Up</button>
+                    <input type = text class="infoBox" style="top:61px; left:1px"></input>
+                    <input type = text class="infoBox" style="top:76px; left:1px"></input>
+                    <input type = text class="infoBox" style="top:91px; left:1px"></input>
+                </div> -->
+
+            </input>
+            
+
+            
+        </div>
+
+        
+        
+        <!-- decoration; holds user options (give, wishlist, help, etc.)-->
+        <div id = "optionsPanel"></div>
+
+        <!--Wish List Button, allows users to see wish list-->
+        <div id="wishListButtonContainer">
+                <div id="wishListButton" class="buttonify clickify"></div>
+                <div id="emptyHeartContainer">
+                    <div id="emptyHeart" class="clickify buttonify"></div>
+                </div>
+        </div>
+
+        <!--Give Button; allows users to donate-->
+        <a href="/give">
+            <div id = "giveButtonHolder">
+                    <img src = "/images/giveButton.png" id = "giveButton" class="buttonify clickify">
+            </div>
+        </a>
+
+        <!--User help-->
+        <div id = "helpButton" class="buttonify clickify">?</div>
+
+        
+        
+        <!--Product thumbnails-->
+        <div class="productGrid" id="productGrid">                          
+        </div>
+
+    
+        <!-- loads products into homescreen-->
+        <script src="/js/productThumbnails.js" type = "module" ></script>
+
+        <!-- creates searching for specific products -->
+        <script type = "module" src ="/js/searchBar.js"></script>
+
+        <!-- allows for log in / signup -->
+        <script src = "js/signInTab.js"></script>
+    
+    </body>
+
+    
+</html>

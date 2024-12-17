@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+    <title>Freebee - Accepter Details</title>
+</head>
+<body style="background:#363636">
+    <link rel="stylesheet" href="/css/productView.css">
+    
+    <h1 id="productTitle"> <%= product.productName %> </h1>
+    <img id="productImage" src="data:image/jpeg;base64, <%= product.productImage.toString('base64') %>"> 
+    <h3 id="productDescription"> <%= product.productDescription%> </h3>
+    <a id="confirmLink" href="<%= '/freebie/confirm/' + product.productID %>">I have received this donation</a>
+
+    <div id="showInterestBox">
+        <p>We have emailed your donor and. Make sure to check your email frequently for a reply.</p>
+    </div>
+
+    <div id="userReporting"> 
+        <a href="<%=`/report/donor?p=${product.productID}` %>">Report this donor</a>
+    </div>
+
+    <a href="<%= 'transactionDetails/accepter/unaccept?p=' + product.productID %>">Unaccept this item</a>
+</body>
+</html>

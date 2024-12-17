@@ -1,0 +1,20 @@
+#productImage {
+    width:700px;
+    height:500px;
+}
+
+#productTitle {
+    color:white;
+    font-size:70px;
+    padding:0;
+    margin:0;
+}
+
+#productDescription {
+    color:white;
+}
+
+#acceptButton {
+    background-color: white;
+    cursor: pointer;
+}

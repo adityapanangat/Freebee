@@ -1,0 +1,140 @@
+/*#region Sign Up or Log In*/
+
+#signInTab {
+    border:2px solid white;
+    background:white;
+    width:310px;
+    height:365px;
+    position:sticky;
+    left: 74vw;
+    top:90px;
+    border-radius: 15%;
+    box-shadow: 5px 5px rgb(99, 99, 99);
+}
+
+#signInTab::before {
+    content:'-- Log in or Sign up -- ';
+    position:relative;
+    top:17px;
+    left:0px;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+    font-weight: bolder;
+    color:rgb(113, 113, 113);
+}
+
+#logInButton {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+    font-weight:bolder; 
+    user-select: none;
+    position:relative;
+    top:40px;
+    left: 1%;
+    height:50px;
+    width:130px;
+    border: 2px solid #e2b474;
+    border-right:none;
+    background-color:#e2b474;
+}
+
+#logInButton:focus {
+    outline:none;
+}
+
+#signUpButton {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+    font-weight:bolder; 
+    user-select:none; 
+    position:relative;
+    top:40px;
+    left:-1%;
+    height:50px;
+    width:130px;
+    border:2px solid #e2b474;
+    border-left:none;
+    background-color:#e0c196;
+}
+
+#signUpButton:focus {
+    outline:none;
+}
+
+.infoBox {
+    position:relative;
+    width:250px;
+    height:30px;
+    border-radius: 5px;
+    border: 3px solid rgb(197, 197, 197);
+    box-shadow:3px 3px #e0c196;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+    font-weight:bolder; 
+    padding-left: 10px;
+    font-size:14px;
+    color:rgb(85, 85, 85);
+}
+
+
+.infoBox:focus {
+    box-shadow: 3px 3px #82adab;
+    outline:none;
+    transition:box-shadow .8s;
+}
+
+
+.infoBoxValid {
+    box-shadow: 3px 3px #b1d797;
+}
+
+.infoBoxInvalid {
+    box-shadow: 3px 3px #e67c6e
+}
+
+.infoBoxInvalid:focus {
+    box-shadow: 3px 3px #82adab;
+}
+
+#infoErrors {
+    color:#e86c5b;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+    font-weight:bolder; 
+    user-select: none;
+    font-size:12px;
+    -webkit-user-select: none;
+    position:absolute;
+    top:220px;
+    left: 24px;
+    width:160px;
+    text-align: left;
+}
+
+
+#enterButton {
+    width:100px;
+    height:30px;
+    position:relative;
+    /* left:-82px;*/ /*left positioning*/
+    left:85px;
+    border: 3px solid rgb(197, 197, 197);
+    border-radius:5px;
+    color:rgb(85, 85, 85);
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+    font-weight:bolder; 
+}
+
+#enterButton:focus {
+    outline:none;
+}
+
+#resetPasswordLink {
+    position:absolute;
+    top:339px;
+    left:43px;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+    font-size:12px;
+    font-weight:bolder;
+    text-decoration: underline;
+    color: #82adab;
+    z-index:3;
+}
+
+
+/*#endregion*/

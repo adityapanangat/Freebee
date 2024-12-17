@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+    <link rel="stylesheet" href="/css/productView.css">
+    <head> 
+    </head>
+    <body>
+        <script src="/js/freebieConfirmation.js"></script>
+        <h3>Have you received this freebie from your donor?</h1>
+        <h3 style="color:black" id="productTitle"> <%= product.productName %> </h2>
+        <img id="productImage" src="data:image/jpeg;base64, <%= product.productImage.toString('base64') %>"> <br>
+
+        <a href="/freebie/confirmed/<%= product.confirmationLink %>" id="yesButton">Yes</a>
+        <p>**If you have not received your freebie, please report your donor in your transaction history</p>
+    </body>
+</html>

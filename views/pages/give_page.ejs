@@ -1,0 +1,51 @@
+<!doctype html>
+<head>
+    <title>Freebee</title>
+</head>
+<body>
+    <script src="/js/give_page.js"></script>
+    
+    
+    <form method="post" action = "http://localhost:3000/give" enctype="multipart/form-data">
+        
+        <!--product name-->
+        <div>
+            <input required  type="text" maxlength="500" name="productName" placeholder="Product name">
+        </div>
+        
+        <!--product description-->
+        <div>
+            <input required type="text" maxlength="3000" name="productDescription" placeholder="Product description, include things like size, specs, quality, etc.">
+        </div>
+
+        <!--product keyword-->
+        <div>
+            <input required type="text" maxlength="50" id ="productKeyWord" name="productKeyWord" placeholder="choose a keyword. Eg: shoes, eraser, etc.">
+        </div>
+
+        <!--product image-->
+        <div>
+            <input required type="file" accept="image/*" id="productImage" name="productImage" onchange = "changeProductImageView()">
+        </div>
+    
+        <!--submit-->
+        <input type = 'submit'>
+
+    </form>
+    
+    <script>
+        document.getElementById("productKeyWord").addEventListener("input", function(event) {
+            // Get the current value of the input field
+            let inputValue = event.target.value;
+            
+            // Remove any special characters or spaces from the input value
+            let sanitizedValue = inputValue.replace(/[^A-Za-z0-9]/g, "");
+            
+            // Update the input field with the sanitized value
+            event.target.value = sanitizedValue;
+        });
+    </script>
+    <!-- test view -->
+    <image id="productImageView" style="width:500px; height:500px;"></image>
+</body>
+</html>

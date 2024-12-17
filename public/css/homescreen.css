@@ -1,0 +1,380 @@
+/*#region Miscellaneous*/
+.buttonify {
+    cursor:pointer;
+    user-select: none;
+}
+
+.footer {
+    width:100px; 
+    height:30px; /* change to make footer bigger/smaller */
+    position:absolute;
+    left: 140px;
+    text-align: center;
+}
+
+.footer p {
+    color:white;
+    position:relative;
+    top:-30px;
+    left:550px;
+}
+
+.clickify:active {
+    transform:scale(1.025);
+}
+
+/*#endregion*/
+
+/*#region FreeBee Logo*/
+.freebeeLogo {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+    font-size: 3.1vw; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; 
+    
+    position:fixed;
+    top:25px;
+    left:15px;
+    z-index:2;
+    color:#c2e3e1;
+    cursor: pointer;
+    user-select: none;
+    transition: color, .5s;
+}
+
+.freebeeLogo:hover {
+    color:#e2b474;
+    transition: color .4s;
+}
+
+.freebeeLogo:active {
+    transform-origin: center;
+    transform:scale(1.025);
+}
+/*#endregion*/
+
+#productMasker {
+    background:#82adab;
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:80px;
+    z-index:-1;
+
+}
+
+/*#region Search Bar*/
+.searchBarHolder {
+    position:fixed;
+    top:-6px;
+    left:0px;
+    text-align:center;
+    width:100%;
+}
+
+.searchBar {
+    width:50%;
+    height:35px;
+    position:relative;
+    top:-5px;
+    left:16px;
+    border-radius: 12px;
+    padding-left:14px;
+    padding-right:50px;
+    caret-color: black;
+    color:#6e7578;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-weight: bold;
+    border:none;
+    box-shadow: 5px 5px;
+
+    font-size:17px;
+}
+
+.searchBar::placeholder {
+    color:rgb(185, 189, 195);
+    opacity:1;
+}
+
+
+.searchBar:focus {
+    outline:none;
+    box-shadow: 5px 5px #cea469;
+    transition: box-shadow .8s;
+}
+
+.searchBarButton {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    position:relative;
+    top:12px;
+    left:-37px;
+    height: 43px;
+    width: 43px;
+    transform:scale(1);
+}
+
+
+
+/*#endregion*/
+
+/*#region Filter Button */
+
+#filterButton {
+    width:40px;
+    height:7px;
+    background:white;
+    border-radius:5px;
+    position:relative;
+    top:0px;
+    left:0px;
+    transform:scale(.9);
+}
+
+#filterButton::before {
+    content:'';
+    width:40px;
+    height:7px;
+    background:white;
+    border-radius:5px;
+    display:inline-block;
+    position:relative;
+    top:5px;
+}
+
+#filterButton::after {
+    content:'';
+    width:40px;
+    height:7px;
+    background:white;
+    border-radius:5px;
+    display:inline-block; 
+    position:relative;
+    top:-2px;
+}
+
+/*#endregion*/
+
+/*#region Profile Button */
+
+#profileLogo {
+    width:47px;
+    height:47px;
+    border: 3px solid #e2b474;
+    border-radius:100%;
+    position:sticky;
+    top:0.5px;
+    left:0px;
+    background-color:#c2e3e1;
+}
+
+#profilePerson {
+    width:15px;
+    height:15px;
+    border: 3px solid white;
+    border-radius:100%;
+    position:absolute;
+    top:8.5px;
+    left:12.5px;
+    background-color:#e2b474;
+}
+
+#profilePerson::before {
+    content:'';
+    width:20px;
+    height:15px;
+    border: 3px solid white;
+    display:inline-block;
+    position:relative;
+    top:15px;
+    left:-4.5px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    background-color:#e2b474;
+}
+
+/*#endregion*/
+
+#optionsPanel {
+    width: 100px;
+    height: 650px;
+    border: 5px solid #6e7578;
+    position:fixed;
+    top:100px;
+    left: -5px;
+    background:#363636;
+}
+
+
+
+/*#endregion*/
+
+/*#region WishList Button*/
+
+#wishListButtonContainer {
+    transform-origin: center;
+    transform:scale(.4);
+    position:fixed;
+    left:-2px;
+    top:110px;
+}
+
+#wishListButton {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin-top: 10px;
+}
+  
+#wishListButton::before, #wishListButton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 52px;
+    height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: #f0f0f0;
+}
+  
+#wishListButton::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+  
+#wishListButton::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+#wishListButton:hover:before {
+    background: #95c7c4;
+    transition: background .3s;
+}
+#wishListButton:hover:after {
+    background: #95c7c4;
+    transition: background .3s;
+}
+
+#wishListButton:active:before {
+    background: #8ed7d2;
+    transition:background 0s;
+}
+
+#wishListButton:active:after {
+    background: #8ed7d2;
+    transition:background 0s;
+}
+
+/*empty heart*/
+
+
+/*#endregion*/
+
+/*#region Give Button -- CLIPPING NEEDS TO BE FIXED*/
+
+#giveButtonHider {
+    width:100px;
+    height: 100px;
+    border: 10px solid #363636;
+    position:absolute;
+    top:250px;
+    left:9.5px;
+    z-index: 1;
+    transform:scale(.56);
+}
+
+#giveButton { 
+    background-color: white;
+    clip-path:polygon(3% 50%, 16% 36%, 19% 39%, 30% 32%, 38% 32%, 62% 35%, 90% 30%, 92% 40%, 60% 59%, 40.4% 59%, 25.4% 74%);
+    overflow:hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+#giveButton:hover {
+    background: #95c7c4;
+    transition: background .4s;
+}
+
+#giveButton:active {
+    background: #8ed7d2;
+}
+
+#giveButtonHolder {
+    position:fixed;
+    top:100px;
+    left:-165px;
+    transform:scale(.165);
+}
+/*#endregion*/
+
+/*#region Help Button */
+#helpButton {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace; 
+    font-size: 50px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; 
+    color:white;
+    position:fixed;
+    left:36px;
+    top:700px;
+}
+
+#helpButton:hover {
+    color: #95c7c4;
+    transition: color .4s;
+}
+
+#helpButton:active {
+    color: #8ed7d2;
+}
+
+/*#endregion */
+
+.productGrid {
+    position:absolute;
+    top:84px;
+    left:100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    z-index:-2;
+}
+
+
+.productThumbnail {
+    flex: 1 1 calc(25% - 32px);
+    flex-direction: column;
+    justify-content: space-between;
+    border: 5px solid #82adab;
+    border-radius: 5px;
+    text-align: center;
+    max-width: calc(25% - 32px);
+    min-height: 50px;
+    cursor: pointer;
+    background-color: grey;
+}
+
+.productThumbnail:active {
+    transform: scale(1.025);
+}
+
+.productThumbnail img {
+    width:100%;
+    flex: 0 0 90%;    
+}
+
+
+.productThumbnail p {
+    font-size: 16px;
+    flex: 0 0 10%;
+    width:100%;
+    color:white;
+    margin:0;
+}
+
+

@@ -1,0 +1,13 @@
+<!doctype html>
+<head>
+    <title>Freebee</title>
+</head>
+<body style="background:#363636">
+    <link rel="stylesheet" href="/css/productView.css">
+    
+    <h1 id="productTitle"> <%= product.productName %> </h1>
+    <img id="productImage" src="data:image/jpeg;base64, <%= product.productImage.toString('base64') %>"> 
+    <h3 id="productDescription"> <%= product.productDescription%> </h3>
+    <a id="acceptButton" href="/freebie/accept?p=<%= product.productID %>">Accept Donation</a>
+</body>
+</html>

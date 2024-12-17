@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report <%= type %></title>
+    <style>
+        /* Hide the additional textarea initially */
+        #otherInput {
+            display: none;
+        }
+        
+        /* Style for the larger textarea */
+        #otherDetails {
+            width: 100%; /* Full width of the container */
+            padding: 15px; /* Adds space inside the textarea */
+            border: 1px solid #ccc; /* Adds a border with a light color */
+            border-radius: 4px; /* Rounds the corners of the textarea */
+            box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+            font-size: 16px; /* Increases the font size for better readability */
+            min-height: 100px; /* Sets a minimum height for the textarea */
+            vertical-align: top; /* Aligns text to the top */
+            resize: vertical; /* Allows resizing only vertically */
+        }
+    </style>
+    <script>
+        function handleOptionChange() {
+            const selectElement = document.getElementById('options');
+            const otherInput = document.getElementById('otherInput');
+            
+            if (selectElement.value === 'other') {
+                otherInput.style.display = 'block';
+            } else {
+                otherInput.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Report Your <%= type %> </h1>
+    <form action="/report/issueReport?p=<%= productID %>" method="POST">
+        <label for="options">My <%= type.toLowerCase() %>...</label>
+        <select id="options" name="reportReason" onchange="handleOptionChange()">
+            
+            <% for(let i = 1; i <= report.length; i++) { %>
+                <option value="<%= report[i-1].value %>"><%= report[i-1].option %></option>
+            <% } %>
+        
+        </select>
+        
+        <!-- Additional textarea that appears when "Other" is selected -->
+        <div id="otherInput">
+            <label for="otherDetails">Please specify:</label>
+            <textarea id="otherDetails" name="otherDetails"></textarea>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form> 
+</body>
+</html>

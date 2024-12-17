@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <header>
+        <title>Log in</title>
+    </header>
+    <body>
+        <script src="/js/logIn.js"></script>
+        <a id="googleLogIn" href="/login/google">Sign in with Google</a> <br> <br>
+        
+        <form id="logInForm" action = "/login/local" method = 'POST'>
+            <input type="email" id="email" name="email" placeholder="Enter your email address..." required> <br><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password..." required> <br><br>
+            <button type="submit">Continue</button> <br><br>
+        </form>
+
+        <p style="color:red" id="message"> </p>
+
+        <a>New here?</a> <a href="/signup">Create an account</a>
+    </body>
+</html> 
